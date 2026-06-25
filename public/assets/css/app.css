@@ -1,0 +1,93 @@
+:root {
+    --focus-ring: 0 0 0 3px rgba(13, 110, 253, 0.45);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a1a;
+    background-color: #fafafa;
+}
+
+a.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #000;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    z-index: 1000;
+}
+
+a.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: 0.25rem;
+}
+
+.result-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.result-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.headline-list {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.headline-list li {
+    margin-bottom: 0.4rem;
+}
+
+.readability-band {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    background: #e7f1ff;
+    color: #084298;
+}
+
+.history-item {
+    border-bottom: 1px solid #eee;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+}
+
+.history-item:last-child {
+    border-bottom: 0;
+}
+
+.history-excerpt {
+    color: #555;
+}
+
+.demo-pill {
+    background: #fff3cd;
+    color: #664d03;
+    border: 1px solid #ffecb5;
+    padding: 0.15rem 0.55rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+}
+
+.error-box {
+    background: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
