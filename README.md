@@ -23,6 +23,12 @@ PHP 8.2, MySQL 8, Composer, Bootstrap 5, vanilla JavaScript and the Fetch API on
 
 No PHP framework. The structure borrows the controller and service separation I have used across CodeIgniter and CakePHP projects, kept thin so the code stays readable in a single sitting.
 
+## Screenshot
+
+![AI Article Toolkit running in demo mode](docs/screenshots/overview.png)
+
+The screenshot shows the app analyzing a sample article in demo mode, with headline suggestions, summary, SEO meta description, Flesch-Kincaid readability score, and reading time estimate.
+
 ## Architecture
 
 ```
