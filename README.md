@@ -4,6 +4,12 @@ A PHP toolkit for newsroom and content workflows. Paste an article, get AI-gener
 
 Built as a portfolio piece to combine four things I work with on a daily basis: PHP backend engineering, REST APIs, OpenAI integration, and accessible front-end delivery.
 
+## Screenshot
+
+![AI Article Toolkit running in demo mode](docs/screenshots/overview.png)
+
+The screenshot shows the app analyzing a sample article in demo mode, with headline suggestions, summary, SEO meta description, Flesch-Kincaid readability score, and reading time estimate.
+
 ## Features
 
 - AI headline generation via OpenAI Chat Completions
@@ -22,12 +28,6 @@ Built as a portfolio piece to combine four things I work with on a daily basis: 
 PHP 8.2, MySQL 8, Composer, Bootstrap 5, vanilla JavaScript and the Fetch API on the front end, PHPUnit 10 for tests, GitHub Actions for CI, Docker and docker-compose for the local environment.
 
 No PHP framework. The structure borrows the controller and service separation I have used across CodeIgniter and CakePHP projects, kept thin so the code stays readable in a single sitting.
-
-## Screenshot
-
-![AI Article Toolkit running in demo mode](docs/screenshots/overview.png)
-
-The screenshot shows the app analyzing a sample article in demo mode, with headline suggestions, summary, SEO meta description, Flesch-Kincaid readability score, and reading time estimate.
 
 ## Architecture
 
