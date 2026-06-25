@@ -6,6 +6,8 @@
 (function () {
     'use strict';
 
+    const BASE = (window.APP_BASE_PATH || '/').replace(/\/?$/, '/');
+
     const form = document.getElementById('analyze-form');
     const articleInput = document.getElementById('article');
     const analyzeBtn = document.getElementById('analyze-btn');
@@ -43,7 +45,7 @@
         resultsEl.setAttribute('aria-busy', 'true');
         resultsEl.innerHTML = '<p>Working on it...</p>';
 
-        fetch('/api/analyze', {
+        fetch(BASE + 'api/analyze', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ article: article })
@@ -105,7 +107,7 @@
     }
 
     function loadHistory() {
-        fetch('/api/history?limit=10')
+        fetch(BASE + 'api/history?limit=10')
             .then(function (response) {
                 if (!response.ok) {
                     throw new Error('History not available.');

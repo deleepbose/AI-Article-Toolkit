@@ -68,6 +68,19 @@ mysql -u root -p < sql/schema.sql
 php -S localhost:8080 -t public
 ```
 
+## Running locally with XAMPP (Windows)
+
+1. Drop the project into `xampp/htdocs/ai-article-toolkit/`.
+2. Run `composer install` from the project root.
+3. Start MySQL from the XAMPP Control Panel and import `sql/schema.sql` through phpMyAdmin.
+4. Copy `.env.example` to `.env` and set `DB_HOST=127.0.0.1`, `DB_USER=root`, `DB_PASS=` for XAMPP defaults.
+5. Start Apache from the XAMPP Control Panel.
+6. Open one of these URLs:
+   - `http://localhost/ai-article-toolkit/` (uses the root `.htaccess` rewrite)
+   - `http://localhost/ai-article-toolkit/public/` (works without root rewrite)
+
+The app detects the URL prefix it is running under, so both URLs work without code changes.
+
 ## Configuration
 
 All configuration is loaded from environment variables via `src/Config/Config.php`. Required values:

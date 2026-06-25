@@ -1,3 +1,7 @@
+<?php
+/** @var string $basePath */
+$base = $basePath ?? '/';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
     <title>AI Article Toolkit</title>
     <meta name="description" content="Newsroom-focused AI toolkit: headlines, summary, SEO meta, readability scoring.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/app.css" rel="stylesheet">
+    <link href="<?= htmlspecialchars($base, ENT_QUOTES) ?>assets/css/app.css" rel="stylesheet">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -43,7 +47,6 @@
 
     <section aria-labelledby="results-heading" class="mt-5" id="results-section" hidden>
         <h2 id="results-heading" class="h5">Results</h2>
-
         <div id="results" aria-live="polite" aria-busy="false"></div>
     </section>
 
@@ -60,6 +63,9 @@
     </div>
 </footer>
 
-<script src="/assets/js/app.js"></script>
+<script>
+    window.APP_BASE_PATH = <?= json_encode($base, JSON_UNESCAPED_SLASHES) ?>;
+</script>
+<script src="<?= htmlspecialchars($base, ENT_QUOTES) ?>assets/js/app.js"></script>
 </body>
 </html>
